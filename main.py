@@ -20,8 +20,9 @@ def missingRow(textFile):
     grid.sort()
 
     for n in grid:
-        if grid.count(n) % 2 != 0 and n not in answer:
-            answer.append(n)
+        if n not in answer:
+            if grid.count(n) % 2 != 0:
+                answer.append(n)
 
     answer.sort(key=int)
 
