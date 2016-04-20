@@ -14,10 +14,7 @@ def missingRow(textFile):
 
     for i in range(1, rowstoread):
         line = txt.readline().split()
-        line = [x for x in line if x.isdigit()]
-        grid += list(line)
-
-    grid.sort()
+        grid += list([x for x in line if x.isdigit()])
 
     for n in grid:
         if n not in answer:
